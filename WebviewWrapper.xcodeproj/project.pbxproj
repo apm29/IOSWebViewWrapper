@@ -13,6 +13,7 @@
 		A090C8EF260EE2BF0010F85E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A090C8EE260EE2BF0010F85E /* Preview Assets.xcassets */; };
 		A090C8FA260EE2C60010F85E /* WebviewWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090C8F9260EE2C60010F85E /* WebviewWrapperTests.swift */; };
 		A090C905260EE2C60010F85E /* WebviewWrapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090C904260EE2C60010F85E /* WebviewWrapperUITests.swift */; };
+		A090C916260EE4E10010F85E /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090C915260EE4E10010F85E /* Webview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		A090C900260EE2C60010F85E /* WebviewWrapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebviewWrapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A090C904260EE2C60010F85E /* WebviewWrapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewWrapperUITests.swift; sourceTree = "<group>"; };
 		A090C906260EE2C60010F85E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A090C915260EE4E10010F85E /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				A090C8EB260EE2BF0010F85E /* Assets.xcassets */,
 				A090C8F0260EE2BF0010F85E /* Info.plist */,
 				A090C8ED260EE2BF0010F85E /* Preview Content */,
+				A090C915260EE4E10010F85E /* Webview.swift */,
 			);
 			path = WebviewWrapper;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A090C916260EE4E10010F85E /* Webview.swift in Sources */,
 				A090C8EA260EE29F0010F85E /* ContentView.swift in Sources */,
 				A090C8E8260EE29F0010F85E /* WebviewWrapperApp.swift in Sources */,
 			);
@@ -417,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WebviewWrapper/Preview Content\"";
 				DEVELOPMENT_TEAM = M7Z7C8272R;
@@ -429,6 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ciih.WebviewWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,6 +510,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M7Z7C8272R;
 				INFOPLIST_FILE = WebviewWrapperUITests/Info.plist;
@@ -514,6 +522,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ciih.WebviewWrapperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WebviewWrapper;

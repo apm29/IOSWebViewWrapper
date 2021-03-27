@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        WebView(urlString: "http://192.168.10.20:5959/#/home?showBack=1")
     }
 }
 
