@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ContentView: View {
-    
+    @State var webview = WKWebView()
     var body: some View {
-        WebView(urlString: "http://192.168.10.20:5959/#/home?showBack=1")
+        NavigationView {
+            WebView(
+                urlString:"http://192.168.10.20:5959/#/home",
+                wkWebView: webview
+            )
+            .navigationTitle("e路求真")
+            .navigationBarItems(leading: Button("返回") {
+                self.webview.goBack()
+            })
+        }
     }
 }
 

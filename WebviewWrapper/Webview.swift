@@ -10,12 +10,12 @@ import SwiftUI
 import WebKit
 struct WebView: UIViewRepresentable {
     let urlString: String
-    
+    let wkWebView: WKWebView
     @Binding var estimatedProgress: Double
-    fileprivate let wkWebView = WKWebView()
     
-    init(urlString: String, estimatedProgress: Binding<Double> = .constant(0)) {
+    init(urlString: String, wkWebView: WKWebView = WKWebView(), estimatedProgress: Binding<Double> = .constant(0)) {
         self.urlString = urlString
+        self.wkWebView = wkWebView
         _estimatedProgress = estimatedProgress
     }
     
